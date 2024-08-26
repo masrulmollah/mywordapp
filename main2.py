@@ -44,7 +44,7 @@ def main():
                     class_data = st.session_state.word_data[st.session_state.word_data['Class'] == class_name]
 
                     for word in class_data['Word']:
-                        col1, col2 = st.columns([2, 3])
+                        col1, col2 = st.columns([1, 3])
                         col1.write(word)
                         if col2.button("X", key=f"delete_{word}"):
                             st.session_state.word_data = delete_word(st.session_state.word_data, word)
