@@ -46,7 +46,7 @@ def main():
                     for word in class_data['Word']:
                         col1, col2 = st.columns([4, 1])
                         col1.write(word)
-                        if col2.button("X", key=f"delete_{word}"):
+                        if col2.button("Delete", key=f"delete_{word}"):
                             st.session_state.word_data = delete_word(st.session_state.word_data, word)
                             save_words(file_path, st.session_state.word_data)
                             st.experimental_rerun()  # Refresh the app to update the view
